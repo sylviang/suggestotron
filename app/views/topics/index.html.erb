@@ -2,15 +2,17 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th></th>
+    <th>Conference I</th>
+    <th>Name</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @topics.each do |topic| %>
-  <tr>
+  <tr class="<%= cycle("even", "odd") -%>">
+    <td><%= topic.conference_id %></td>
     <td><%= link_to topic.title, topic %></td>
+    <td><%= topic.name %></td>
     <td><%= pluralize(topic.votes.length, "vote") %></td>
     <td><%= button_to '+1', votes_path(topic_id: topic.id), method: :post %></td>
     <td><%= link_to 'Delete', topic, confirm: 'Are you sure?', method: :delete %></td>

@@ -7,9 +7,13 @@
 
 <p>
   <b>Description:</b>
-  <%= @topic.description %>
+  <%= simple_format(@topic.description) %>
 </p>
 
+<p>
+  <b>Name:</b>
+  <%= @topic.name %>  
+</p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

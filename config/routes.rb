@@ -1,9 +1,11 @@
 Suggestotron::Application.routes.draw do
+  resources :conferences
+
   resources :votes
 
   resources :topics
   
-  root :to => 'topics#index'
+  root :to => 'conferences#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

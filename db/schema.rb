@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513055700) do
+ActiveRecord::Schema.define(:version => 20120513081827) do
+
+  create_table "conferences", :force => true do |t|
+    t.string   "conf_name"
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.integer  "attendance_goal"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "topics", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "name",          :default => "blank", :null => false
+    t.integer  "conference_id", :default => 1,       :null => false
   end
 
   create_table "votes", :force => true do |t|

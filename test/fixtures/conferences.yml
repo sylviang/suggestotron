@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  conf_name: MyString
+  startdate: 2012-05-13 15:19:18
+  enddate: 2012-05-13 15:19:18
+  attendance_goal: 1
+
+two:
+  conf_name: MyString
+  startdate: 2012-05-13 15:19:18
+  enddate: 2012-05-13 15:19:18
+  attendance_goal: 1
